@@ -1,0 +1,45 @@
+check_interval_seconds: 60
+timeout_seconds: 15
+ssl_expire_days: 7
+response_time_warning_ms: 10000
+
+telegram:
+  bot_token: "-"
+  chat_id: "-"
+
+targets:
+  - name: "FunPay"
+    url: "https://funpay.com/"
+    success_codes: [200, 301, 302, 403]
+    max_response_time_ms: 10000
+    enabled: true
+
+  - name: "Ozon"
+    url: "https://www.ozon.ru/"
+    success_codes: [200, 301, 302, 403]
+    max_response_time_ms: 10000
+    enabled: true
+
+  - name: "Wildberries"
+    url: "https://www.wildberries.ru/"
+    success_codes: [200, 301, 302, 403]
+    max_response_time_ms: 10000
+    enabled: true
+
+  - name: "2GIS Novosibirsk"
+    url: "https://2gis.ru/novosibirsk"
+    success_codes: [200, 301, 302, 403]
+    max_response_time_ms: 10000
+    enabled: true
+
+  - name: "NGS Novosibirsk"
+    url: "https://ngs.ru/"
+    success_codes: [200, 301, 302, 403]
+    max_response_time_ms: 10000
+    enabled: true
+
+  - name: "HTTPBin Test Error"
+    url: "https://httpbin.org/status/500"
+    success_codes: [200]
+    max_response_time_ms: 5000
+    enabled: true
